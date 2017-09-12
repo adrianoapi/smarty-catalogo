@@ -26,4 +26,4 @@ $smarty = new Smarty;
 $smarty->assign("titulo", $titulo);
 $smarty->assign("livros", $array_livros);
 $smarty->assign("autores", $array_autores);
-$smarty->assign("index.tpl");
+$smarty->display("index.tpl");
