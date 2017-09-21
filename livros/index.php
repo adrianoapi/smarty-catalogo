@@ -6,20 +6,21 @@
  * @package Example-application
  */
 $titulo = "Livros da Natec Editora";
-$array_livros = array(
-    "Desenvolvendo com Laravel",
-    "Entendendo Algoritmos",
-    "Desenvolvendo para iPhone e iPad - 5ª edição",
-    "Introdução à Orientação a Objetos com C++ e Python",
-    "Laravel para ninjas"
-);
-$array_autores = array(
-    "Matt Stauffer",
-    "Aditya Y. Bhargava",
-    "Ricardo Lecheta",
-    "Orlando Saraiva Jr.",
-    "Ademir C. Gabardo"
-);
+$servidor = "localhost";
+$usuario = "root";
+$senha = "";
+$banco = "livros";
+
+$con = new mysqli($servidor, $usuario, $senha, $banco);
+$res = $con->query("SELECT titulo, autor FROM livros ORDER BY titulo");
+$num_lines = $res->num_rows;
+
+for ($i = 0; $i < $num_lines; $i++) {
+    $dados = $res->fetch_row();
+    $array_livros[] = $dados[0];
+    $array_autores[] = $dados[1];
+}
+$con->close();
 
 require '../libs/Smarty.class.php';
 $smarty = new Smarty;
