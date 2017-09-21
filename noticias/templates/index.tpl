@@ -3,18 +3,28 @@
         <title>{$titulo}</title>
     </head>
     <body>
-        <h2 class="center">{$titulo}</h2>
-        <table>
-            <tr bgcolor="#FFFF00">
-                <td>Livro</td>
-                <td>Autor</td>
-            </tr>
-            {section name=i loop=$livros}
-                <tr bgcolor="{cycle values="#eeeeee,#d0d0d0"}">
-                    <td>{$livros[i]}</td>
-                    <td>{$autores[i]}</td>
+        <div align="center">
+            <table boErder="0" cellspacing="0" width="60%">
+                <tr>
+                    <td width="50%" bgcolor="#E8E8E8">
+                        Últimas notícias
+                    </td>
+                    <td width="50%" bgcolor="#E8E8E8">
+                        <p algin="right"><strong>{$smarty.now|date_format:"%d/%m/%Y"}</strong></p>
+                    </td>
                 </tr>
-            {/section}
-        </table>
+                <tr>
+                    <td width="100%" colspan="2" bgcolor="#FBFBFB">
+                        <br>
+                        {section name=i loop=$titulos}
+                            <p>
+                                <strong><u>{$titulos[i]}</u></strong>
+                                <i>({$datas[i]date_format:"%d/%m/%Y %H:%M"})</i>
+                            </p>
+                        {/section}
+                    </td>
+                </tr>
+            </table>
+        </div>
     </body>
 </html>
