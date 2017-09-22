@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>{$titulo}</title>
+        <title>{$title}</title>
     </head>
     <body>
         <div align="center">
@@ -19,7 +19,9 @@
                         {section name=i loop=$titulos}
                             <p>
                                 <strong><u>{$titulos[i]}</u></strong>
-                                <i>({$datas[i]date_format:"%d/%m/%Y %H:%M"})</i>
+                                <i>({$datas[i]|date_format:"%d/%m/%Y %H:%M"})</i><br>
+                                {$textos[i]|truncate:150}
+                                [<a href="mostra-noticia.php?id={$ids[i]}">Leia mais</a>]
                             </p>
                         {/section}
                     </td>

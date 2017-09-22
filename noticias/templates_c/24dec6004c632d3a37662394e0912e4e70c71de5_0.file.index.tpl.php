@@ -1,18 +1,18 @@
 <?php
-/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-09-21 23:41:41
+/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-09-22 14:16:13
   from "C:\xampp\htdocs\smarty\noticias\templates\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32-dev-22',
-  'unifunc' => 'content_59c43215706bd8_24227452',
+  'unifunc' => 'content_59c4ff0d6e9e76_98142304',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '24dec6004c632d3a37662394e0912e4e70c71de5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\noticias\\templates\\index.tpl',
-      1 => 1506030100,
+      1 => 1506082536,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59c43215706bd8_24227452 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59c4ff0d6e9e76_98142304 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.date_format.php';
+if (!is_callable('smarty_modifier_truncate')) require_once 'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.truncate.php';
 ?>
 <html>
     <head>
-        <title><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
+        <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </title>
     </head>
     <body>
@@ -54,7 +55,12 @@ for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
                             <p>
                                 <strong><u><?php echo $_smarty_tpl->tpl_vars['titulos']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)];?>
 </u></strong>
-                                <i></i>
+                                <i>(<?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['datas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)],"%d/%m/%Y %H:%M");?>
+)</i><br>
+                                <?php echo smarty_modifier_truncate($_smarty_tpl->tpl_vars['textos']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)],150);?>
+
+                                [<a href="mostra-noticia.php?id=<?php echo $_smarty_tpl->tpl_vars['ids']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)];?>
+">Leia mais</a>]
                             </p>
                         <?php
 }

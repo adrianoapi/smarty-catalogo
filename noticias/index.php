@@ -1,6 +1,6 @@
 <?php
 
-$titulo = "Livros da Natec Editora";
+$titulo = "Notícias";
 $servidor = "localhost";
 $usuario = "root";
 $senha = "";
@@ -21,6 +21,7 @@ $con->close();
 
 require '../libs/Smarty.class.php';
 $smarty = new Smarty;
+$smarty->assign('title',$titulo);
 $smarty->assign('ids', $array_ids);
 $smarty->assign('titulos', $array_titulos);
 $smarty->assign('textos', $array_textos);
