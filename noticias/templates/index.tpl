@@ -21,7 +21,7 @@
                                 <strong><u>{$titulos[i]}</u></strong>
                                 <i>({$datas[i]|date_format:"%d/%m/%Y %H:%M"})</i><br>
                                 {$textos[i]|truncate:150}
-                                [<a href="mostra-noticia.php?id={$ids[i]}">Leia mais</a>]
+                                [<a href="mostra_noticia.php?id={$ids[i]}">Leia mais</a>]
                             </p>
                         {/section}
                     </td>

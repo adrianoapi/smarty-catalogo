@@ -1,18 +1,18 @@
 <?php
-/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-09-22 14:16:13
+/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-09-25 15:01:46
   from "C:\xampp\htdocs\smarty\noticias\templates\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32-dev-22',
-  'unifunc' => 'content_59c4ff0d6e9e76_98142304',
+  'unifunc' => 'content_59c8fe3a29a6d5_24022718',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '24dec6004c632d3a37662394e0912e4e70c71de5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\noticias\\templates\\index.tpl',
-      1 => 1506082536,
+      1 => 1506344498,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59c4ff0d6e9e76_98142304 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59c8fe3a29a6d5_24022718 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.date_format.php';
 if (!is_callable('smarty_modifier_truncate')) require_once 'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.truncate.php';
 ?>
@@ -59,7 +59,7 @@ for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
 )</i><br>
                                 <?php echo smarty_modifier_truncate($_smarty_tpl->tpl_vars['textos']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)],150);?>
 
-                                [<a href="mostra-noticia.php?id=<?php echo $_smarty_tpl->tpl_vars['ids']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)];?>
+                                [<a href="mostra_noticia.php?id=<?php echo $_smarty_tpl->tpl_vars['ids']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)];?>
 ">Leia mais</a>]
                             </p>
                         <?php
