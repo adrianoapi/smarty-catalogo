@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>{$title}</title>
+        <title>{$titulo}</title>
     </head>
     <body>
         <h1>{$titulo}</h1><br>
